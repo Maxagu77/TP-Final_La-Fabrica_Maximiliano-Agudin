@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* vars */
+  //impotr
+
+@import 'variables';  
+
+body {
+    background-color: $color-fondo;  
+} 
+
+div.boton-mesadas {
+    margin-top: 30px !important;
+}
+div.boton-dormitorio {
+    margin-top: 30px !important;
+}
+
+      /* Aplico mixing */
+
+@mixin boton {
+    margin: 12px;
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    /* color: rgb(107, 68, 18); */
+    border: 2px solid $color-boton;
+    padding: 10px;
+  }
+  a.mesadas {
+      @include boton;
+      color: rgb(117, 81, 34);
+  }
+  a.diseño-dormitorio {
+    @include boton;
+    color: rgb(184, 34, 29);
+}
+#header {
+    a:hover {
+      background-color: rgb(98, 92, 80);
+      color: blanchedalmond;
+    }
+    h1.titulo_h1 {
+        margin-top: 100px !important;
+        text-align: center;
+        font-family: 'Lobster', cursive !important;
+        color: rgb(92, 71, 21) !important;
+    }
+    h2.titulo_h2 {
+        margin-top: 100px !important;
+        text-align: center;
+        font-family: 'Lobster', cursive !important;
+        color: rgb(92, 71, 21) !important;
+    }
+    .header_logo {
+        border-style: double;
+        position: absolute;
+        margin-top: 8px !important;
+        margin-left:10px !important;
+        width: 200px;
+        height: auto;
+    }
+}
+/* aplicando maps las variables en su carpeta*/
+
+ @each $titulo, $size in $titular {  
+    .titulo_#{$titulo} {font-size: $size;
+    }
+}
+.animate__animated.animate__flipInX {
+    --animate-duration: 4s;
+  }
+ 
+@media screen and (max-width: 900px) {
+    .header_logo {
+        display: none;
+    }
+}
+main {
+    div.flex_container {  
+      width: 100%;
+      height: 500px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      border: 5px solid rgb(141, 84, 9);
+      background-image: url("../img/fabrica.jpg");
+      background-size: cover;
+      align-items: center;
+    } 
+
+    .flex_items { 
+        height: 198px;
+        border: rgb(126, 70, 15) 8px solid;
+    }
+    .flex_items:hover {
+        border: 8px solid rgb(88, 88, 231)
+    }    
+    .flex_items_texto {
+        font-family: 'Lobster', cursive;
+        background: blanchedalmond;
+        z-index: 800;
+        position: absolute;
+        text-align: center;
+        color: black;
+        
+    }    
+    
+    .card_flex {
+        display: flex;
+        padding: 20px;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        row-gap: 10px;
+    }
+
+    .card_item {
+        padding: 5px;
+        width: 290px;
+        height: auto;
+        border: 5px solid rgb(143, 85, 10); 
+        transition: width 2s;
+    }
+    .card_item:hover{
+        width: 540px;
+        height: auto;
+      .card_flex{
+          flex-wrap: nowrap;
+      }
+    }
+    .card_img img {
+        width: 100%;
+    }
+    .card_titulo {
+        text-align: center;
+    }
+    .card_titulo h3 {
+        font-family: 'Lobster', cursive !important;
+        color: rgb(92, 71, 21) !important;
+    }
+    .card_texto {
+        font-family: 'Lobster', cursive !important;
+        color: rgb(54, 42, 13) !important;
+    }    
+}   
+    
+#nosotros {
+    margin-top: 130px;
+    text-align: center;
+}
+
+     /* map-get */
+
+.color_parrafo {
+    padding: 10px;
+    background: map-get($color-parrafo, base);
+    color: map-get($color-parrafo, texto);
+}
+
+.formulario { 
+    margin-left: 15%;
+    padding: 20px;
+    width: 70%;
+}
+.formulario-deco {
+    @extend .formulario;
+    border: 8px solid rgb(161, 63, 6);
+}
+
+section .video {
+    margin:10px auto;
+    display:block;
+    position: relative;
+    width: 500px;
+    height: 315px;
+}
+/* achico bootstrap x q a partir de 576 scrolleaba horizontal*/
+    
+    @media (min-width: 500px){
+        .ms-sm-3 {
+    margin-left: 1rem!important;
+          }
+}
+    @media (min-width: 500px){
+        .float-sm-end {
+    float: right!important;
+    }
+}
+
+.footer {
+        background-color: black;
+        height: 80px;
+    &_realizado {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        color: white;  
+    }
+    &_redes {
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+    }
+}
+

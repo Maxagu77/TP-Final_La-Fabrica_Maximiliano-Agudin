@@ -1,0 +1,244 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* vars */
+/* vars */
+body {
+  background-color: #e4c687 !important;
+}
+
+div.boton-mesadas {
+  margin-top: 30px !important;
+}
+
+div.boton-dormitorio {
+  margin-top: 30px !important;
+}
+
+/* Aplico mixing */
+a.mesadas {
+  margin: 12px;
+  font-family: 'Lobster', cursive;
+  text-decoration: none;
+  /* color: rgb(107, 68, 18); */
+  border: 2px solid #6b4412;
+  padding: 10px;
+  color: #755122;
+}
+
+a.diseño-dormitorio {
+  margin: 12px;
+  font-family: 'Lobster', cursive;
+  text-decoration: none;
+  /* color: rgb(107, 68, 18); */
+  border: 2px solid #6b4412;
+  padding: 10px;
+  color: #b8221d;
+}
+
+#header a:hover {
+  background-color: #625c50;
+  color: blanchedalmond;
+}
+
+#header h1.titulo_h1 {
+  margin-top: 100px !important;
+  text-align: center;
+  font-family: 'Lobster', cursive !important;
+  color: #5c4715 !important;
+}
+
+#header h2.titulo_h2 {
+  margin-top: 100px !important;
+  text-align: center;
+  font-family: 'Lobster', cursive !important;
+  color: #5c4715 !important;
+}
+
+#header .header_logo {
+  border-style: double;
+  position: absolute;
+  margin-top: 8px !important;
+  margin-left: 10px !important;
+  width: 200px;
+  height: auto;
+}
+
+/* aplicando maps las variables en su carpeta*/
+.titulo_h1 {
+  font-size: 50px;
+}
+
+.titulo_h2 {
+  font-size: 45px;
+}
+
+.animate__animated.animate__flipInX {
+  --animate-duration: 4s;
+}
+
+@media screen and (max-width: 900px) {
+  .header_logo {
+    display: none;
+  }
+}
+
+main div.flex_container {
+  width: 100%;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 5px solid #8d5409;
+  background-image: url("../img/fabrica.jpg");
+  background-size: cover;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .flex_items {
+  height: 198px;
+  border: #7e460f 8px solid;
+}
+
+main .flex_items:hover {
+  border: 8px solid #5858e7;
+}
+
+main .flex_items_texto {
+  font-family: 'Lobster', cursive;
+  background: blanchedalmond;
+  z-index: 800;
+  position: absolute;
+  text-align: center;
+  color: black;
+}
+
+main .card_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 50px;
+  row-gap: 10px;
+}
+
+main .card_item {
+  padding: 5px;
+  width: 290px;
+  height: auto;
+  border: 5px solid #8f550a;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+main .card_item:hover {
+  width: 540px;
+  height: auto;
+}
+
+main .card_item:hover .card_flex {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+main .card_img img {
+  width: 100%;
+}
+
+main .card_titulo {
+  text-align: center;
+}
+
+main .card_titulo h3 {
+  font-family: 'Lobster', cursive !important;
+  color: #5c4715 !important;
+}
+
+main .card_texto {
+  font-family: 'Lobster', cursive !important;
+  color: #362a0d !important;
+}
+
+#nosotros {
+  margin-top: 130px;
+  text-align: center;
+}
+
+/* map-get */
+.color_parrafo {
+  padding: 10px;
+  background: #6b4412;
+  color: #e4c687;
+}
+
+.formulario, .formulario-deco {
+  margin-left: 15%;
+  padding: 20px;
+  width: 70%;
+}
+
+.formulario-deco {
+  border: 8px solid #a13f06;
+}
+
+section .video {
+  margin: 10px auto;
+  display: block;
+  position: relative;
+  width: 500px;
+  height: 315px;
+}
+
+/* achico bootstrap x q a partir de 576 scrolleaba horizontal*/
+@media (min-width: 500px) {
+  .ms-sm-3 {
+    margin-left: 1rem !important;
+  }
+}
+
+@media (min-width: 500px) {
+  .float-sm-end {
+    float: right !important;
+  }
+}
+
+.footer {
+  background-color: black;
+  height: 80px;
+}
+
+.footer_realizado {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+.footer_redes {
+  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=estyles.css.map */
