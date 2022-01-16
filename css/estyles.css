@@ -203,18 +203,18 @@ section .video {
   margin: 10px auto;
   display: block;
   position: relative;
-  width: 500px;
-  height: 315px;
+  width: 320px;
+  height: 215px;
 }
 
 /* achico bootstrap x q a partir de 576 scrolleaba horizontal*/
-@media (min-width: 500px) {
+@media (min-width: 320px) {
   .ms-sm-3 {
     margin-left: 1rem !important;
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 320px) {
   .float-sm-end {
     float: right !important;
   }
